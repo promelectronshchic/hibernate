@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.emt.controls.hibernate.Role" table="role">
+		<id name="id" column="id">
+			<generator class="increment" />
+		</id>
+		<property name="title" column="title"  type="string" />
+		
+		<set name="users" table="user">
+			<key><column name="role_id" not-null="false" /></key>
+			<one-to-many class="com.emt.controls.hibernate.User" />
+		</set>
+	</class>
+</hibernate-mapping>

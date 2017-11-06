@@ -1,0 +1,41 @@
+package com.emt.controls.hibernate;
+
+import java.io.Serializable;
+import java.util.Set;
+
+public class Role implements Serializable {
+
+	private static final long serialVersionUID = -5359541851336575441L;
+
+	private Long id;
+	private String title;
+	private Set<User> users;
+	
+	public Role() {
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public Set<User> getUsers() {
+		return users;
+	}
+
+	public void setUsers(Set<User> users) {
+		this.users = users;
+	}
+	
+}
