@@ -9,8 +9,6 @@
 		<property name="lastname" column="last_name" type="string" />
 		<property name="age" column="age" type="int" />
 		
-		<many-to-one name="role" class="com.emt.controls.hibernate.Role">
-			<column name="role_id" not-null="false" />
-		</many-to-one>
+		<one-to-one name="taxCard" class="com.emt.controls.hibernate.TaxCard" />
 	</class>
 </hibernate-mapping>

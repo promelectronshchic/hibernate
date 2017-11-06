@@ -32,8 +32,15 @@ public class Main
 		    	usersSet.add(user);
 		    	role.setUsers(usersSet);
 
+		    	TaxCard taxCard = new TaxCard();
+		    	taxCard.setUser(user);
+		    	taxCard.setIdentifier(new byte[] {1,2,3,4,5});
+		    	user.setTaxCard(taxCard);
+		    	
+		    	
 		    	try {
 			    	session.beginTransaction();
+			    	session.save(taxCard);
 			    	session.save(role);
 			    	session.save(user);
 			    	session.getTransaction().commit();

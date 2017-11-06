@@ -12,6 +12,7 @@ public class User implements Serializable {
 	private String lastname;
 	
 	private Role role;
+	private TaxCard taxCard;
 	
 	public User() {
 	}
@@ -58,6 +59,14 @@ public class User implements Serializable {
 
 	public void setRole(Role role) {
 		this.role = role;
+	}
+
+	public TaxCard getTaxCard() {
+		return taxCard;
+	}
+
+	public void setTaxCard(TaxCard taxCard) {
+		this.taxCard = taxCard;
 	}
 	
 }

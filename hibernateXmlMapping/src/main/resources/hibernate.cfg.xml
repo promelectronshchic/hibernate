@@ -16,5 +16,6 @@
  
  		<mapping resource="role.cfg.xml" />
         <mapping resource="user.cfg.xml" />
+        <mapping resource="tax_card.cfg.xml" />
     </session-factory>
 </hibernate-configuration>
